@@ -13,3 +13,6 @@ Se crea el reposiotrio para el proyecto de la elavoracion de las actividades de 
 * App python para requerir esa temperatura: req temp --> python app.py
 * Worker de Cola para extraer y poner en otro lado (temp agrega en un archivo): celery -A tareas worker -l info -P solo
 * Servicio Componente Interno: flaskr_temp --> flask run -p 5002
+
+
+![image](https://user-images.githubusercontent.com/98674577/188791161-77b8f1aa-3e4d-4b9b-ac08-fcf06891ebcb.png)
