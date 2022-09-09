@@ -15,5 +15,5 @@ Se crea el reposiotrio para el proyecto de la elavoracion de las actividades de 
 5. Component Consumo Queue Alertador -Servicio Componente Interno: flaskr_temp --> flask run -p 5002
 6. Component Observador - App python para monitorear componente Alertador: --> python app.py
 
-![image](https://user-images.githubusercontent.com/98674577/189456084-eab4a6bd-f750-4871-bf3f-cdfd29bd71e2.png)
+![image](https://user-images.githubusercontent.com/98674577/189456191-afd0fb97-7fb1-44c6-862b-d831ecaada0a.png)
 
