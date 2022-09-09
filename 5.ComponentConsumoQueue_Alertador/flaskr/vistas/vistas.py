@@ -22,3 +22,7 @@ class VistaTemperaturas(Resource):
         db.session.add(temp)
         db.session.commit()
         return temp_schema.dump(temp), 201
+
+class VistaHealthCheck(Resource):
+    def get(self):
+        return {"status": "ok"}, 200
