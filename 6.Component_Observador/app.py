@@ -14,22 +14,17 @@ def get_status():
             print('SERVICIO Alertador 5003 ONLINE')
     except ConnectionError as e:
         print('SERVICIO Alertador OFFLINE')
-        get_status()
     except requests.exceptions.Timeout:
     # Maybe set up for a retry, or continue in a retry loop
         print('SERVICIO Alertador OFFLINE --- TIMEOUT')
-        get_status()
     except requests.exceptions.TooManyRedirects:
         # Tell the user their URL was bad and try a different one
         print('SERVICIO Alertador OFFLINE --- REDIRECT')
-        get_status()
     except requests.exceptions.RequestException as e:
         # catastrophic error. bail.
         print('SERVICIO Alertador OFFLINE --- REQUEST')
-        get_status()
     except Exception as e:
         print('error' + str(e))
-        get_status()
 
 def printit():
     threading.Timer(3.0, printit).start()
