@@ -14,6 +14,7 @@ Se crea el reposiotrio para el proyecto de la elavoracion de las actividades de 
 4. Component Queue - Worker de Cola para extraer y poner en otro lado (temp agrega en un archivo): celery -A tareas worker -l info -P solo
 5. Component Consumo Queue Alertador -Servicio Componente Interno: flaskr_temp --> flask run -p 5002
 6. Component Observador - App python para monitorear componente Alertador: --> python app.py
+7. Component Consumo Queue Alertador -Servicio Componente Interno de Respaldo: flaskr_temp --> flask run -p 5003
 
 ![image](https://user-images.githubusercontent.com/98674577/189456191-afd0fb97-7fb1-44c6-862b-d831ecaada0a.png)
 
