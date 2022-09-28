@@ -1,0 +1,50 @@
+<div class="container align-items-center">
+  <div class="row align-items-center">
+    <div class="col-xs-10 col-lg-5 card px-2 ">
+      <div class="card-body text-center">
+        <figure><img src="../../../assets/betting.png" alt="" style="width: 100px;"></figure>
+        <h2 class="my-2">E-Porra</h2>
+        <p class="my-2">¡La manera más fácil y divertida de apostar!</p>
+      </div>
+    </div>
+
+    <div class="col-xs-10 col-lg-5 container">
+      <div class="row">
+
+        <div class="my-2 row">
+          <h1 class="text-center">Ingreso</h1>
+        </div>
+        <div *ngIf="error">
+          <div class="alert alert-danger" role="alert">
+            Usuario o contraseña incorrectos
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-lg-3 col-form-label">Usuario</label>
+          <div class="col-lg-9  ">
+            <input #usuario type="text" class="form-control" placeholder="Usuario">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-lg-3 col-form-label">Contraseña</label>
+          <div class="col-lg-9">
+            <input #contrasena type="password" class="form-control" placeholder="*********">
+          </div>
+        </div>
+        <div class="col-12 text-center mt-3">
+          <button (click)="onLogInUsuario(usuario.value, contrasena.value)" type="button"
+            class="btn btn-warning col-8">Ingresar</button>
+        </div>
+        <div class="col-12 text-center mt-2">
+          <p>¿No tienes cuenta? <a href="/signup" style="color: green;">Registrate</a></p>
+        </div>
+        <div class="col-12 text-center mt-2">
+          <p>¿Olvido su Correo? <a href="/signup">Recuperar Correo</a></p>
+        </div>
+        <div class="col-12 text-center mt-2">
+          <p>¿Olvido Contraseña? <a href="/signup">Recuperar Contraseña</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

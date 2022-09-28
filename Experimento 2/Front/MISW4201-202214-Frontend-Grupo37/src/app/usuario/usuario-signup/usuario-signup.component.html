@@ -1,0 +1,130 @@
+<div class="container align-items-center">
+  <div class="row align-items-center">
+    <div class="col-xs-10 col-lg-5 card px-2 ">
+      <div class="card-body text-center">
+        <figure><img src="../../../assets/betting.png" alt="" style="width: 100px;"></figure>
+        <h2 class="my-2">E-Porra</h2>
+        <p class="my-2">La manera más fácil y divertida de apostar...</p>
+      </div>
+    </div>
+
+    <div class="col-xs-10 col-lg-5 container">
+      <div class="row">
+
+        <div class="my-2 row">
+          <h1 class="text-center">Registro</h1>
+        </div>
+
+        <form [formGroup]="usuarioForm" (ngSubmit)="registrarUsuario()">
+
+          <div class="form-group">
+            <div class="mb-3 row">
+              <label for="usuario" class="col-lg-3 col-form-label">Nombre de Usuario</label>
+              <div class="col-lg-9  ">
+                <input formControlName="usuario" type="text" class="form-control" placeholder="Usuario">
+              </div>
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('usuario')?.hasError('required') && usuarioForm.get('usuario')?.touched">
+              Debe ingresar un usuario para registrarse
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('usuario')?.hasError('maxlength')">
+              El usuario no debe exceder los 50 carácteres
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <div class="mb-3 row">
+              <label for="password" class="col-lg-3 col-form-label">Contraseña</label>
+              <div class="col-lg-9">
+                <input formControlName="password" type="password" class="form-control" placeholder="*********">
+              </div>
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
+              Debe ingresar una contraseña para registrarse
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('password')?.hasError('maxlength')">
+              La contraseña no debe exceder los 50 carácteres
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('password')?.hasError('minlength')">
+              La contraseña debe tener más de 4 carácteres
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="mb-3 row">
+              <label for="confirmPassword" class="col-lg-3 col-form-label">Confirmar contraseña</label>
+              <div class="col-lg-9">
+                <input formControlName="confirmPassword" type="password" class="form-control" placeholder="*********">
+              </div>
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('confirmPassword')?.hasError('required') && usuarioForm.get('confirmPassword')?.touched">
+              Debe ingresar una contraseña para registrarse
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('confirmPassword')?.hasError('maxlength')">
+              La contraseña no debe exceder los 50 carácteres
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('confirmPassword')?.hasError('minlength')">
+              La contraseña debe tener más de 4 carácteres
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('confirmPassword')?.value !== usuarioForm.get('password')?.value">
+              Las contraseñas no coinciden
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="mb-3 row">
+              <label for="u_email" class="col-lg-3 col-form-label">Correo Electronico</label>
+              <div class="col-lg-9">
+                <input formControlName="u_email" type="email" class="form-control" placeholder="user@eporra.com">
+              </div>
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('u_email')?.hasError('required') && usuarioForm.get('u_email')?.touched">
+              Debe ingresar un Email para registrarse
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('u_email')?.hasError('maxlength')">
+              El email no debe exceder los 50 carácteres
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('u_email')?.invalid && usuarioForm.get('u_email')?.touched">
+              El email debe ser valido
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mb-3 row">
+              <label for="u_phone" class="col-lg-3 col-form-label">Telefono</label>
+              <div class="col-lg-9">
+                <input formControlName="u_phone" type="email" class="form-control" placeholder="123456789">
+              </div>
+            </div>
+            <div class="alert alert-danger my-3"
+              *ngIf="usuarioForm.get('u_phone')?.hasError('required') && usuarioForm.get('u_phone')?.touched">
+              Debe ingresar un Telefono para registrarse
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('u_phone')?.hasError('maxlength')">
+              El telefono no debe exceder los 10 carácteres
+            </div>
+            <div class="alert alert-danger my-3" *ngIf="usuarioForm.get('u_phone')?.invalid && usuarioForm.get('u_phone')?.touched">
+              El telefono debe ser valido
+            </div>
+          </div>
+
+          <div id="divRegistrar" class="col-12 text-center mt-3" (click)="onRegisterD()">
+            <button id="btnRegistrar" type="submit" class="btn btn-warning col-8"
+              [disabled]="!usuarioForm.valid || usuarioForm.get('confirmPassword')?.value !== usuarioForm.get('password')?.value"
+              >Registrarse</button>
+          </div>
+          <div class="col-12 text-center mt-2">
+            <p>¿Ya tienes cuenta? <a href="/" style="color: green;">Inicia sesión</a></p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

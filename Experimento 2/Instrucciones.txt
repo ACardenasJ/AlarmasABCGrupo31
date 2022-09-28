@@ -1,0 +1,6 @@
+1. Crear Entorno Virtual
+python -m venv venv
+2. Activar Entorno Virtual
+./venv/Scripts/activate
+3. Instalar paquetes
+py -m pip install -r requirements.txt
