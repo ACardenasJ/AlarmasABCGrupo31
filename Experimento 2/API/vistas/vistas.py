@@ -9,14 +9,14 @@ import json
 class VistaAPIGateway(Resource):
     def get(self):
         try:
-            url = 'http://localhost:5000/api/'
+            url = 'http://localhost:5000/validarPass'
             data = {'usuario' : request.json('usuario'),
                     'contrasena': request.json('contrasena')}
 
             content = json.loads(requests.post(url,
                                               data).get_data())
             if content.status_code == 404:
-                return {'error': 'Servicio no que valida la complejidad del passs'}, 404
+                return {'error': 'Servicio que valida la complejidad del passs no esta disponible'}, 404
             else:
                 registerResponse = content.json()
                 registerResponseDate = registerResponse['status']
