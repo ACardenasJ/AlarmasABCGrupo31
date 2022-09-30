@@ -11,7 +11,7 @@ class VistaAPIGateway(Resource):
         try:
             url = 'http://localhost:5000/api/'
             data = {'usuario' : request.json('usuario'),
-                     'contrasena': request.json('contrasena')}
+                    'contrasena': request.json('contrasena')}
 
             content = json.loads(requests.post(url,
                                               data).get_data())
@@ -25,9 +25,9 @@ class VistaAPIGateway(Resource):
                 
                 url_back = 'http://localhost:5000/signin/user'
                 dataBudy = {'usuario' : request.json('contrasena'),
-                                'contrasena': request.json('contrasena'),
-                                'email': request.json["u_email"], 
-                                'phone' : request.json["phone"]}
+                            'contrasena': request.json('contrasena'),
+                            'email': request.json["u_email"], 
+                            'phone' : request.json["phone"]}
                 register = json.loads(requests.post(url_back,
                                                         dataBudy).get_data())  
                 return json.dumps(register), 200
