@@ -44,3 +44,10 @@ class VistaAPIGateway(Resource):
             return {'error': 'Servicio InfoTemp offline -- Request'}, 404
         except Exception as e:
             return {'error': 'Servicio InfoTemp - Error desconocido -' + str(e)}, 404
+    """Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo
+    Codigo para que juan trabaje y deje de mamar gallo"""
