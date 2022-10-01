@@ -45,6 +45,10 @@ export class UsuarioSignupComponent implements OnInit {
         this.showSuccess()
       },
       error => {
+        if(error.error){
+          //this.showError(`Ha ocurrido un error: ${error.error}`)
+        }
+        //console.log(error)
         this.showError(`Ha ocurrido un error: ${error.message}`)
       })
   }

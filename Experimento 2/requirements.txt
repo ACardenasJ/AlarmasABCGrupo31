@@ -22,3 +22,5 @@ SQLAlchemy==1.4.15
 Werkzeug==2.0.1
 gunicorn==20.1.0
 numpy==1.23.3
+requests==2.28.1
+flask-cors==3.0.10

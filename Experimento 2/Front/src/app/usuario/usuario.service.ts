@@ -18,6 +18,9 @@ export class UsuarioService {
     }
 
     userSignUp(usuario: string, contrasena: string, correo: string, phone: string): Observable<any> {
-        return this.http.post<any>(`${this.backUrl}/signin/user`, { "usuario": usuario, "u_email": correo, "contrasena": contrasena, "phone": phone })
+        console.log("Enviando datos al api gateway");
+        console.log(`${this.backUrl}/registrar`);
+
+        return this.http.post<any>(`${this.backUrl}/registrar`, { "usuario": usuario, "u_email": correo, "contrasena": contrasena, "phone": phone })
     }
 }

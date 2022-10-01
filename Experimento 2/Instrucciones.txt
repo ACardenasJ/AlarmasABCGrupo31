@@ -4,3 +4,9 @@ python -m venv venv
 ./venv/Scripts/activate
 3. Instalar paquetes
 py -m pip install -r requirements.txt
+
+4. Correr 
+Back --> 5000
+API --> 5001
+MServicio --> 5002
+Front --> 4200
