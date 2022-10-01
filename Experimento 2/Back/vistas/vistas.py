@@ -50,7 +50,7 @@ class VistaLogIn(Resource):
         return usuario_schema.dump(usuario)
     
     def delete(self):
-        ##usuario = Usuario.query.get_or_404(id_usuario)
+       
         usuario = Usuario.query.filter(Usuario.usuario == request.json["usuario"],
                                         Usuario.id == request.json["id"],
                                         Usuario.rol == request.json["rol"]).first()
