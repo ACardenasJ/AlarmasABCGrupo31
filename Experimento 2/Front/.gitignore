@@ -44,8 +44,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-angular.json
-package.json
+#angular.json
+#package.json
 package-lock.json
 
 
