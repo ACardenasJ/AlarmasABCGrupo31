@@ -9,12 +9,10 @@ import json
 class VistaAPIGateway(Resource):
     def post(self):
         try:
-            print("REQUEST LLEGANDO A API GATEWAY")
             url = 'http://localhost:5002/validarPass'
             
             data = {'usuario' : request.json['usuario'],
-                    'contrasena': request.json['contrasena']}
-            print(data)                    
+                    'contrasena': request.json['contrasena']}                   
 
             content = requests.post(url,json=data)
             print(content.json())
@@ -32,7 +30,6 @@ class VistaAPIGateway(Resource):
                             'u_email': request.json["u_email"], 
                             'phone' : request.json["phone"]}
                 register = requests.post(url_back,json=dataBudy)  
-                print(register.json())
                 return register.json(), 200
         except ConnectionError as e:
             return {'error': 'Servicio InfoTemp offline -- Connection'}, 404
